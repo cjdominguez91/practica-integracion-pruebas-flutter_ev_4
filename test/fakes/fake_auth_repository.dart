@@ -17,6 +17,11 @@ class FakeAuthRepository implements AuthRepository {
 
   FakeAuthRepository({UsuarioApp? usuarioInicial}) : _usuario = usuarioInicial;
 
+  /// Registra una cuenta sin iniciar sesión (para probar el login).
+  void agregarCuenta(String email, String password) {
+    _cuentas[email] = password;
+  }
+
   @override
   UsuarioApp? get usuarioActual => _usuario;
 
