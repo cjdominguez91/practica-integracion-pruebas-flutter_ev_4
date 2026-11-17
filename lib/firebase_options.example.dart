@@ -1,54 +1,66 @@
-// ARCHIVO DE EJEMPLO — no contiene claves reales.
+// ARCHIVO DE EJEMPLO — contiene valores FALSOS, no claves reales.
 //
-// El archivo real `lib/firebase_options.dart` está en .gitignore. Para
-// generarlo con tu propio proyecto de Firebase ejecuta:
+// El archivo real `lib/firebase_options.dart` está en .gitignore y no se
+// sube al repositorio. Para generarlo con tu propio proyecto de Firebase:
 //
 //   dart pub global activate flutterfire_cli
 //   flutterfire configure
+//
+// Alternativa manual: copia este archivo como `lib/firebase_options.dart`
+// y reemplaza los valores con los de la consola de Firebase
+// (Configuración del proyecto → Tus apps → Android).
 //
 // ignore_for_file: type=lint
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
+/// Opciones de Firebase por plataforma. En este proyecto solo está
+/// configurado Android.
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
-    if (kIsWeb) return web;
+    if (kIsWeb) {
+      throw UnsupportedError(
+        'DefaultFirebaseOptions no está configurado para web. '
+        'Ejecuta "flutterfire configure" para agregarlo.',
+      );
+    }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions no está configurado para iOS. '
+          'Ejecuta "flutterfire configure" para agregarlo.',
+        );
+      case TargetPlatform.macOS:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions no está configurado para macOS. '
+          'Ejecuta "flutterfire configure" para agregarlo.',
+        );
+      case TargetPlatform.windows:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions no está configurado para Windows. '
+          'Ejecuta "flutterfire configure" para agregarlo.',
+        );
+      case TargetPlatform.linux:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions no está configurado para Linux. '
+          'Ejecuta "flutterfire configure" para agregarlo.',
+        );
       default:
         throw UnsupportedError(
-          'DefaultFirebaseOptions no está configurado para esta plataforma.',
+          'DefaultFirebaseOptions no está soportado en esta plataforma.',
         );
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'TU_API_KEY_WEB',
-    appId: '1:000000000000:web:0000000000000000000000',
-    messagingSenderId: '000000000000',
-    projectId: 'tu-proyecto-id',
-    authDomain: 'tu-proyecto-id.firebaseapp.com',
-    storageBucket: 'tu-proyecto-id.appspot.com',
-  );
-
+  // Valores de ejemplo: no corresponden a ningún proyecto real.
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'TU_API_KEY_ANDROID',
+    apiKey: 'AIzaSyEJEMPLO-NO-ES-UNA-CLAVE-REAL-0000',
     appId: '1:000000000000:android:0000000000000000000000',
     messagingSenderId: '000000000000',
-    projectId: 'tu-proyecto-id',
-    storageBucket: 'tu-proyecto-id.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'TU_API_KEY_IOS',
-    appId: '1:000000000000:ios:0000000000000000000000',
-    messagingSenderId: '000000000000',
-    projectId: 'tu-proyecto-id',
-    storageBucket: 'tu-proyecto-id.appspot.com',
-    iosBundleId: 'com.example.practicaIntegracionPruebasFlutter',
+    projectId: 'taskflow-ejemplo',
+    storageBucket: 'taskflow-ejemplo.firebasestorage.app',
   );
 }
