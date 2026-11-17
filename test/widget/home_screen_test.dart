@@ -22,6 +22,22 @@ Tarea _tarea(String id, String titulo, {String uid = 'uid-1', int dia = 1}) =>
 
 void main() {
   group('HomeScreen', () {
+    testWidgets('mientras carga muestra el indicador de progreso', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        envolver(
+          const HomeScreen(usuario: _usuario),
+          tareas: FakeTareaRepository(),
+        ),
+      );
+
+      // Primer frame: el stream todavía no ha emitido.
+      expect(find.byKey(const Key('home_cargando')), findsOneWidget);
+      await tester.pump();
+      expect(find.byKey(const Key('home_cargando')), findsNothing);
+    });
+
     testWidgets('con lista vacía muestra "No tienes tareas"', (tester) async {
       await tester.pumpWidget(
         envolver(

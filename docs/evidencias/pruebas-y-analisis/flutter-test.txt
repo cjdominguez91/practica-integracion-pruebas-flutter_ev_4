@@ -1,0 +1,31 @@
+00:00 +0: loading C:/dev/practica_integracion_pruebas_flutter/test/unit/tarea_model_test.dart
+00:00 +0: C:/dev/practica_integracion_pruebas_flutter/test/unit/tarea_model_test.dart: Tarea toMap no incluye el id y guarda la fecha como Timestamp
+00:00 +1: C:/dev/practica_integracion_pruebas_flutter/test/unit/tarea_model_test.dart: Tarea fromMap(toMap) reconstruye la misma tarea
+00:00 +2: C:/dev/practica_integracion_pruebas_flutter/test/unit/tarea_model_test.dart: Tarea fromMap acepta DateTime y milisegundos como fecha
+00:00 +3: C:/dev/practica_integracion_pruebas_flutter/test/unit/tarea_model_test.dart: Tarea fromMap con campos faltantes usa valores por defecto
+00:00 +4: C:/dev/practica_integracion_pruebas_flutter/test/unit/tarea_model_test.dart: Tarea copyWith cambia solo los campos indicados
+00:00 +5: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.email vacío o nulo devuelve error
+00:00 +6: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.email formato inválido devuelve error
+00:00 +7: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.email correo válido devuelve null
+00:00 +8: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.password vacía devuelve error
+00:00 +9: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.password menos de 6 caracteres devuelve error
+00:00 +10: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.password 6 o más caracteres es válida
+00:00 +11: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.confirmarPassword no coincide devuelve error
+00:00 +12: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.confirmarPassword coincide devuelve null
+00:00 +13: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.titulo vacío o solo espacios devuelve error
+00:00 +14: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.titulo demasiado largo devuelve error
+00:00 +15: C:/dev/practica_integracion_pruebas_flutter/test/unit/validators_test.dart: Validators.titulo título válido devuelve null
+00:00 +16: C:/dev/practica_integracion_pruebas_flutter/test/widget/app_smoke_test.dart: sin sesión la app arranca en Login
+00:01 +17: C:/dev/practica_integracion_pruebas_flutter/test/widget/home_screen_test.dart: HomeScreen mientras carga muestra el indicador de progreso
+00:01 +18: C:/dev/practica_integracion_pruebas_flutter/test/widget/login_screen_test.dart: LoginScreen con campos vacíos muestra validaciones y no llama al repo
+00:01 +19: C:/dev/practica_integracion_pruebas_flutter/test/widget/login_screen_test.dart: LoginScreen con campos vacíos muestra validaciones y no llama al repo
+00:01 +20: C:/dev/practica_integracion_pruebas_flutter/test/widget/login_screen_test.dart: LoginScreen con campos vacíos muestra validaciones y no llama al repo
+00:01 +21: C:/dev/practica_integracion_pruebas_flutter/test/widget/login_screen_test.dart: LoginScreen con campos vacíos muestra validaciones y no llama al repo
+00:02 +22: C:/dev/practica_integracion_pruebas_flutter/test/widget/app_smoke_test.dart: flujo completo con fakes: login → crear → detalle → completar → eliminar → logout
+00:02 +23: C:/dev/practica_integracion_pruebas_flutter/test/widget/app_smoke_test.dart: flujo completo con fakes: login → crear → detalle → completar → eliminar → logout
+00:02 +24: C:/dev/practica_integracion_pruebas_flutter/test/widget/app_smoke_test.dart: flujo completo con fakes: login → crear → detalle → completar → eliminar → logout
+00:02 +25: C:/dev/practica_integracion_pruebas_flutter/test/widget/app_smoke_test.dart: flujo completo con fakes: login → crear → detalle → completar → eliminar → logout
+00:02 +26: C:/dev/practica_integracion_pruebas_flutter/test/widget/tarea_form_screen_test.dart: TareaFormScreen con título vacío muestra error y no crea la tarea
+00:03 +27: C:/dev/practica_integracion_pruebas_flutter/test/widget/tarea_form_screen_test.dart: TareaFormScreen con título válido crea la tarea con el uid del usuario
+00:04 +28: C:/dev/practica_integracion_pruebas_flutter/test/widget/tarea_form_screen_test.dart: TareaFormScreen en edición precarga los datos de la tarea
+00:04 +29: All tests passed!
